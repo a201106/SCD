@@ -29,12 +29,18 @@ function gotResults(error, results) {
     img = document.getElementById('animal_image');
 
     if (results[0].label == "Barking") {
-      img.src = 'bark.gif';
+      img.src = 'download (1).jpg';
       dog = dog+1;
     } else if (results[0].label == "Meowing") {
-      img.src = 'meow.gif';
+      img.src = '02-cat-training-NationalGeographic_1484324_square.webp';
       cat = cat + 1;
-    } else{
+    }else if (results[0].label == "mooing") {
+      img.src = 'Cow_female_black_white.jpg';
+      cow = cow + 1;
+    } else if (results[0].label == "roaring") {
+      img.src = 'download.jpg';
+      lion = lion + 1;
+    }else{
       img.src = 'listen.gif';
     }
   }
